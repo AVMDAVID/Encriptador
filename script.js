@@ -2,15 +2,12 @@
     var input = document.querySelector(".input-texto");
     var resultado = document.querySelector(".resultado");
     var sinTexto = document.querySelector(".sin-contenido");
-    var mensajeFinal = document.querySelector(".mensaje-final");
-    var placeHolder = document.querySelector(".no-texto"); 
+    var mensajeFinal = document.querySelector(".mensaje-final"); 
     var codificación = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     const logo = document.querySelector(".logo");
     const botonEncriptar = document.querySelector(".encriptador");
     const botonDesencriptar = document.querySelector(".desencriptador");
     const botonCopiar = document.querySelector(".copiar");
-    
-        placeHolder.style.display= "none";
 
     function encriptarMensaje(stringEncriptar){        
         stringEncriptar = stringEncriptar.toLowerCase();
@@ -33,22 +30,25 @@
     }
 
     function encriptar(){
-        var mensajeEncriptado = encriptarMensaje(input.value);
-        resultado.value = mensajeEncriptado;
-        sinTexto.style.display = "none";
-        input.value = "";
+        if (input.value == ""){
+            aparece();
+        } else {
+            desaparece();
+            var mensajeEncriptado = encriptarMensaje(input.value);
+            resultado.value = mensajeEncriptado;
+            input.value = "";
+        }
     }
 
-    function desencriptar(){
-        
+    function desencriptar(){        
         if (input.value == ""){
-            document.getElementsByClassName(".no-texto").style.display = "block";
-            document.getElementsByClassName(".copiar").style.display = "none";
+            aparece();
+        } else {
+            desaparece();
+            var mensajeDesencriptado = desencriptarMensaje(input.value);
+            resultado.value = mensajeDesencriptado;
+            input.value = "";
         }
-        var mensajeDesencriptado = desencriptarMensaje(input.value);
-        resultado.value = mensajeDesencriptado;
-        sinTexto.style.display = "none";
-        input.value = "";
     }
     
     function copiar(){
@@ -59,11 +59,22 @@
 
     function home(){
         input.value = "";
-        resultado.value = "";
-        sinTexto.style.display = "block"
+        aparece();
     }
 
+    function aparece(){
+        sinTexto.style.display = "block";
+        botonCopiar.style.display = "none";
+        resultado.style.display = "none";
+    }
     
+    function desaparece(){
+        sinTexto.style.display = "none";
+        botonCopiar.style.display = "block";
+        resultado.style.display = "block";
+    }
+
+    aparece();
     logo.onclick = home;
     botonEncriptar.onclick = encriptar;
     botonDesencriptar.onclick = desencriptar;
