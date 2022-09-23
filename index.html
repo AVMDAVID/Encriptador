@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador de texto</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header>
+            <img class="logo" src="Imagenes/letra-d.png" alt="logo">
+        </header>
+
+        <main>                
+            <section class="pantalla-mensaje">            
+                <textarea class="input-texto" required placeholder="Ingrese su mensaje aqui"></textarea>
+                <legend class="aviso"><img src="Imagenes/Vector.png" alt="Aviso"> Solo letras  minúsculas y sin acento</legend>     
+                <button class = encriptador> Encriptar </button>
+                <button class = desencriptador> Desencriptar</button>
+            </section>  
+
+            <section class="pantalla-resultado">                                     
+                <div class="sin-contenido">
+                    <img class="personaje" src="Imagenes/Muñeco.png" alt="Personaje">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <h3>Por favor, ingresa el texto que deseas ecriptar o desencriptar</h3>
+                </div>
+                <div class="mensaje-final">
+                    <textarea class="resultado"></textarea><placeholder class="no-texto"> No se encontro ningún mensaje</placeholder>
+                    <button class = copiar> Copiar</button>
+                </div>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

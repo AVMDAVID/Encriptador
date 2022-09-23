@@ -1,0 +1,164 @@
+body{
+    font-family: "Inter", sans-serif;
+    background: #F3F5FC;
+}
+main{
+    display: flex;
+}
+
+.logo{
+    position: absolute;
+    display: inline-block;
+    width: 2.5%;
+    left: 5%;
+    top: 5%;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.logo:hover{
+    transform: scale(0.8);
+}
+
+.input-texto {
+    text-transform: lowercase;
+    width: 45%;
+    height: 55%;
+    border: none;
+    background: none;
+    font-size: 26px;
+    padding: 5px 0;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: #0A3871;
+}
+
+::placeholder { 
+    text-transform: initial;
+}
+
+.input-texto:focus{
+    border: none;
+    outline: none;
+}
+
+.aviso{
+    font-size: 13px;
+    position: absolute;
+    left: 10%;
+    top: calc(85% - 35px);
+}
+
+.encriptador{
+    position: absolute;
+    top: 85%;
+    left: 12%;
+    width: 20%;
+    font-size: 18px;
+    padding: 1em 0;
+    border-radius: 24px;
+    color: #FFFFFF;
+    background: #0A3871;
+    border: none;
+    cursor: pointer;
+}
+
+.desencriptador{
+    border: solid 2px;
+    position: absolute;
+    top: 85%;
+    left: 34%;
+    width: calc(20% - 2px);
+    font-size: 18px;
+    padding: calc(1em - 2px) 0;
+    background: #D8DFE8;
+    color: #0A3871;
+    border-radius: 24px;
+    border-color: #0A3871;
+    cursor: pointer;    
+}
+
+.pantalla-resultado{
+    position:absolute;
+    width: 36%;
+    height: 95%;
+    left: 60%;
+    top: 2.5%;
+    background: #FFFFFF;    
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+
+.sin-contenido{
+    display: inline-block;
+    text-align: center;    
+    width: 60%;
+    padding: 0 20%;
+    position: absolute;
+    top: 20%;
+}
+
+.sin-contenido img{
+    width: 100%;
+}
+
+div h2{
+    font-size: 23px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    color: #343A40;    
+}
+
+div h3{
+    font-size: 14px;
+    color: #343A40;  
+}
+
+.resultado{
+    text-transform: lowercase;
+    width: 80%;
+    height: 75%;
+    border: none;
+    background: none;
+    font-size: 22px;
+    padding: 5px 0;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    color: #0A3871;
+}
+
+.no-texto { 
+    text-transform: initial; 
+    position: absolute;
+    top: 45%;
+    width: 70%;
+    padding: 0 15%;
+    font-size: 26px;
+    text-align: center;
+
+}
+
+.resultado:focus{
+    border: none;
+    outline: none;
+}
+
+
+.copiar{    
+    border: solid 2px;
+    position: absolute;
+    top: 87%;
+    left: 30.173%;
+    width: calc(40% - 2px);
+    font-size: 18px;
+    padding: calc(1em - 2px) 0;
+    background: none;
+    color: #0A3871;
+    border-radius: 24px;
+    border-color: #0A3871;
+    cursor: pointer;    
+}
+
