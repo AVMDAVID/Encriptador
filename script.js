@@ -30,7 +30,7 @@
     }
 
     function encriptar(){
-        if (input.value == ""){
+        if (input.value.trim() == ""){
             aparece();
         } else {
             desaparece();
@@ -41,7 +41,7 @@
     }
 
     function desencriptar(){        
-        if (input.value == ""){
+        if (input.value.trim() == ""){
             aparece();
         } else {
             desaparece();
@@ -66,6 +66,7 @@
         sinTexto.style.display = "block";
         botonCopiar.style.display = "none";
         resultado.style.display = "none";
+        input.value = "";
     }
     
     function desaparece(){
